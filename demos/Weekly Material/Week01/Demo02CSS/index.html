@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 01 Demo 02: CSS</title>
+        <style>
+            /* Selector */
+            p 
+            {
+                color:aqua;
+
+            }
+
+            h1
+            {
+                    /*         red  gree blue    0 - 255 */
+                  color: rgb(120, 140, 255);
+                  background-color: rgba(120, 140, 33, 0.5);  /*  alpha fourth value is to control transparency of the color*/
+            }
+            
+            body
+            {
+                background-color: black;
+            }
+
+            h2
+            {
+                color: white;
+            }
+
+        </style>
+        <!-- Link your style file with your html file -->
+        <!-- ./ - current working directory
+              ../ - parent directory -->
+        <link rel="stylesheet" href="./css/styles.css">
+        
+       
+
+    </head>
+    <body>
+        <!-- CSS :  Cascading Style Sheets -->
+        <!-- 1. Inline style is embedded within an element/ tag and applied to that element -->
+        <!-- 2. Internal Style put it inside the head section of your page. -->
+        <!-- 3. External Style sheet: Put the style information in a separate file.  -->
+        <header>
+            <!-- In css we use Property : Value; Pro1: Value1; -->
+            <!-- Uncomment the following line to test it with inline style -->
+            <!-- <h1 style="color:white; background-color: blue; "> Week 01: Day 03: Demo 02 : CSS 08 May 2026</h1> -->
+            <h1> Week 01: Day 03: Demo 02 : CSS 08 May 2026</h1>
+        </header>
+
+        <main>
+            <h2> Inline styles</h2>
+            <p>Inline style is embedded within an element/ tag and applied to that element </p>
+
+            <p style="color:red"> This is second para on my web page.</p>
+
+            <p> This is one another para on my web page.</p>
+        </main>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>

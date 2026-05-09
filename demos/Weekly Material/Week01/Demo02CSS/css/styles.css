@@ -1,0 +1,44 @@
+/* 
+Selector{
+    property1: value;
+    property2: value2;
+    .
+    .
+    .
+    propery n: value;
+} 
+
+
+*/
+p 
+{
+    /* property: value */
+    color: orange;
+}
+
+h1
+{
+    background-color: white;
+    color:aquamarine;
+
+    border-radius: 20px;
+    /* Regular style of adding border */
+    /* 
+    border-width: 3px;
+    border-style: solid;
+    border-color: blueviolet; 
+    */
+
+    /* Shortcut to add border */
+
+    border: 3px solid blueviolet;
+
+    /* padding: is space between the border and text  */
+/*     
+    padding-top:10px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    padding-right: 40px; */
+
+    padding: 10px 40px 30px 20px;
+}
