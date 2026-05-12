@@ -8,8 +8,8 @@ Selector{
     propery n: value;
 } 
 
-
 */
+
 p 
 {
     /* property: value */
@@ -21,7 +21,9 @@ p
     /* font-family: 'Times New Roman', Times, serif; */
     font-family: "Roboto", sans-serif;
     font-family: "Playwrite AR Guides", cursive;
-    text-decoration: none;
+    /* 2 different properties */
+    text-decoration: overline;
+    text-decoration-style: dashed;
 }
 
 h1
@@ -39,8 +41,11 @@ h1
 
     /* Shortcut to add border */
 
-    border: 3px solid blueviolet;
+    /* border: 3px solid blueviolet; */
 
+    /* Border to a specific side is also possible */
+    border-top: 3px solid blueviolet;
+    
     /* padding: is space between the border and text  */
 /*     
     padding-top:10px;
@@ -63,3 +68,69 @@ h1
 
 }
 
+/* Apply this style on p and h1 */
+p, h1
+{
+    line-height: 1.5;
+    word-spacing: 3px;
+    letter-spacing: 1px; 
+}
+
+/* All p elements inside main container */
+/* but if you want to target only direct child of main use the following */
+/* main > p */
+main p
+{
+    text-indent: 20px;
+}
+
+/* if you need to target any element based on the id use #id */
+#p1
+{
+    color:blue;
+}
+
+/* for class use . period (dot)   */
+/* When we want to apply same kind of styling for 
+a number of members of an element type */
+.firstclass
+{
+    color:bisque;
+    background-color: brown;
+}
+
+/* pseudo-selectors */
+/* link, visited, hover, active */
+
+a
+{
+    display: block;
+    text-decoration: none;
+}
+
+a:link /* applies to links that have not been clicked*/
+{
+    color:aqua;
+}
+
+/* applies to visited links */
+a:visited
+{
+    color:yellowgreen;
+}
+
+/* applies to link when you are going to hover your mouse pointer */
+a:hover
+{
+    color: orange;
+    text-decoration: underline;
+    font-size: 18pt;
+    background-color: aqua;
+}
+
+/* applies to links when it is being clicked. 
+You can hold left mouse key to check this one. */
+a:active
+{
+    color:yellow;
+}
