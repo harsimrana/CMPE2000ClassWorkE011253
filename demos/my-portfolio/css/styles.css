@@ -1,0 +1,73 @@
+/* Styling information for my portfolio */
+
+body{
+    background-color: #f4f7fb;
+    color: #222222;
+    margin:0;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: #1f3b57;
+    color:white;
+    text-align: center;
+    padding:30px 20px;
+}
+
+header h1{
+    margin-bottom: 5px;
+}
+
+.tagline
+{
+    font-size: 18px;
+    margin-top:0;
+}
+
+nav{
+    margin-top: 20px;
+}
+
+header nav a{
+    color: white;
+    text-decoration: none;
+    margin:0 10px;
+}
+
+header nav a:hover{
+    text-decoration: underline;
+}
+
+main{
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.hero,
+.card,
+aside,
+#about{
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}
+
+.hero img{
+    margin-top:15px;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: #1f3b57;
+    color:white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a{
+    color: white;
+}
