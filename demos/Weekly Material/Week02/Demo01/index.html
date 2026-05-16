@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 03: Day 03: Demo 01 </title>
+
+        <style>
+            table, td, th{
+                border: 1px solid black;
+            }
+            table{
+                border-collapse: collapse;
+            }
+            td,th{
+                padding: 10px;
+            }
+
+            /* th{
+                background-color: blue;
+                color:white;
+            }
+
+            td{
+                background-color: aquamarine;
+                color:black;
+            } */
+
+            /* pseudo-class */
+            /* nth-child */
+            /* odd, even n, 2n, 3n, 2n+1  */
+            tr:nth-child(3n){
+                background-color: aquamarine;
+                color:blue;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1> Week 03: Day 03: Demo 01 15 May 2026: HTML Lists, Tables</h1>
+        </header>
+
+        <main>
+            <h2>Available Food Items</h2>
+            <ul style="list-style-type: square;">
+                <li> Coffee  <!-- Nested list for first element-->
+                    <ul>
+                        <li> Cold Coffee</li>
+                        <li> Hot Coffee</li>
+                    </ul>
+                </li>
+                <li>Tea</li>
+                <li>Juice
+                    <!-- Ol tag is used to create ordered list -->
+                    <ol style="list-style-type: lower-roman;">
+                        <li>Apple Juice</li>
+                        <li>Orange Juice</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <!-- dl tag is used to create description list -->
+            <dl>
+                <dt>HTML </dt> <!-- dt is used for data term-->
+                <dd>Hypertext Markup Language </dd>  <!-- dd is used for data description-->
+
+                <dt> CSS</dt>
+                <dd>Cascading Sytle Sheet</dd>
+
+                <dt>JS</dt>
+                <dd>JavaScript</dd>
+
+            </dl>
+
+            <h2> Student information </h2>
+            <!-- Will control styling from css -->
+            <table>
+            <!-- <table border="1"> -->  
+                <!--table tag is used to create a table -->
+                <thead>
+                    <!-- First row which is basically a header row -->
+                    <tr>  <!-- to create any row inside your table-->
+                        <th>Student Id </th>  <!-- Table heading tag-->
+                        <th>Student Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Second row, a data row -->
+                    <tr>
+                        <td rowspan="2"> 1001.</td>
+                        <td rowspan="2">Simran</td>
+                        <td> simran@nait.ca</td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td> harsimran@nait.ca</td>
+                    </tr>
+
+                    <tr>
+                        <td>1002.</td>
+                        <td></td>
+                        <td> adam@nait.ca</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3"> Created by Harsimranjot</td>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </main>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>
