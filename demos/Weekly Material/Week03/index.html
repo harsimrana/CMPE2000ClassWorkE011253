@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 03: Day 03: Demo 01</title>
+        <!-- Internal Style sheet -->
+        <style>
+            main p span
+            {
+                color: red;
+                font-weight: bold;
+                text-decoration: line-through;
+                /* Change inline element to block element */
+                /* display: block; */
+            }
+            img
+            {
+                background-color: aquamarine;
+                width:300px;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1> Week 03: Day 03: Demo 01: Grids </h1>
+        </header>
+        <main>
+            <!-- span element is an inline one.
+                 it allows us to format a part of text 
+                 differently from the remainder of the text 
+            -->
+            <p> This is <span> first para </span> on my page.</p>
+            <!-- 
+                ./  - current directory 
+                ../ - parent directory
+                
+            -->
+            <figure>    
+                <img src="../../my-portfolio/img/alex-johnson-profile-picture.svg" alt="Alex Johnson Picture">
+                <!-- figcaption 
+                    can used to provide caption to an image by embedding the img element
+                    in a figure element 
+                -->
+                <figcaption> Picture of Alex Johnson</figcaption>
+            </figure>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
