@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 03: Day 03: Demo 02</title>
+        <!-- Internal style sheet -->
+        <style>
+            main section
+            {
+                border: 1px solid black;
+                text-align: center;
+            }
+
+            main
+            {
+                display: grid; /* To define it as a grid */
+                /* grid-template-columns: 20% 50% 30%; */
+                /* grid-template-columns: repeat(3, 33%); */
+
+                /* repeat(#Columns/rows, width of each colum/row) */
+
+                grid-template-columns: 1fr 2fr 1fr 1fr;
+                grid-template-rows: 100px 200px;
+
+                /* Regular way to add gap */
+                /* column-gap: 10px;
+                row-gap: 20px; */
+
+                /* Shortcut for row and column gap */
+                /*    R     C */
+                gap: 20px 10px;  
+            }
+
+            .item6
+            {
+                background-color: aquamarine;
+                /* for row */
+                grid-row-start: 1;
+                grid-row-end: 2;
+
+                /* for column */
+                grid-column-start: 2;
+                grid-column-end: span 2;
+            }
+
+            .item1
+            {
+                background-color: blue;
+                /* Regular using 2 properties */
+                /* grid-row-start: 2;
+                grid-row-end: 3; */
+                /* shortcut way */
+
+                grid-row: 2/3;      /* M/N  - M start line N end line*/
+
+                /* grid-column-start: 3;
+                grid-column-end: 4; */
+
+                /* Shortcut */
+                grid-column: 3/4;
+
+            }
+
+            .item2
+            {
+                grid-column: 1/2;
+                grid-row: 1/end;
+                background-color: aqua;
+            }
+
+            .item4{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1> Week 03: Day 03: Demo 02: Grids</h1>
+        </header>
+
+        <main>
+            <!-- Grid Container -->
+                <!-- block level element that acts as parent to the elements inside -->
+            <!-- Grid Items -->
+                <!--  items that reside within grid container -->
+            <section class="item1"> 1 </section>
+            <section class="item2"> 2 </section>
+            <section class="item3"> 3 </section>
+            <section class="item4"> 
+                <section> ng1</section>
+                <section> ng2</section>
+                <section> ng3</section>
+                <section> ng4</section>
+            </section>
+            <section class="item5"> 5 </section>
+            <section class="item6"> 6 </section>
+
+        </main>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>
