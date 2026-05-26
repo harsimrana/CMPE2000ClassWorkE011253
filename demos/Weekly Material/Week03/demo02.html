@@ -71,8 +71,32 @@
 
             .item4{
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
+
+                /* grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;  */
+                
+                /* Shortcut property */
+                /*              rows / columns */
+                grid-template:  1fr 1fr / 1fr 1fr;
+            }
+
+            .ng1{
+                grid-row: 2/3;
+                grid-column: 2/3;
+            }
+
+            .ng2{
+                grid-row: 2/3;
+                grid-column: 1/2;
+            }
+            
+            .ng3{
+                grid-row: 1/2;
+                grid-column: 2/3;
+            }
+            .ng4{
+                grid-row: 1/2;
+                grid-column: 1/2;
             }
         </style>
     </head>
@@ -90,10 +114,10 @@
             <section class="item2"> 2 </section>
             <section class="item3"> 3 </section>
             <section class="item4"> 
-                <section> ng1</section>
-                <section> ng2</section>
-                <section> ng3</section>
-                <section> ng4</section>
+                <section class="ng1"> ng1</section>
+                <section class="ng2"> ng2</section>
+                <section class="ng3"> ng3</section>
+                <section class="ng4"> ng4</section>
             </section>
             <section class="item5"> 5 </section>
             <section class="item6"> 6 </section>
