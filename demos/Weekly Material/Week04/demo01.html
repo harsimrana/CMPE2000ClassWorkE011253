@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 04 Demo 01: 26.05.2026: Responsive Layouts</title>
+
+        <style>
+            header, main, footer
+            {
+                border: 2px solid blue;
+            }
+
+            header
+            {
+                background-color: aquamarine;
+            }
+
+            section {
+                border: 3px dotted blueviolet;
+                text-align: center;
+
+            }
+
+            h2{
+                text-align: center;
+            }
+
+            main
+            {
+                display: grid;
+                row-gap:10px;
+            }
+
+            @media screen and (min-width: 800px) /* Desktop view */
+            {
+                header {
+                    background-color: blue;
+                    color: white;
+                }  
+
+                main{
+                    display: grid;
+                    /*  grid template shotcut   rows/ columns */
+                    grid-template:  1fr 1fr/ repeat(3, 1fr);
+                    gap: 10px 15px;
+                }
+
+                h2 {
+                    grid-row: 1/2;
+                    grid-column: 1/ end; 
+                }
+
+                section {
+                    border: 2px solid green;
+                }
+
+
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Week 04 Demo 01: 26.05.2026: Responsive layouts</h1>
+        </header>
+
+        <!-- grid container -->
+        <main> 
+            <!-- Grid items -->
+            <h2> Working with responsive layouts</h2>
+            <section>
+                <h3> Section 1</h3>
+
+            </section>
+
+            <section>
+                <h3> Section 2</h3>
+                
+            </section>
+
+            <section>
+                <h3> Section 3</h3>
+                
+            </section>
+        </main>
+
+        <footer>
+            &#169; NAIT 2026
+        </footer>
+    </body>
+</html>
