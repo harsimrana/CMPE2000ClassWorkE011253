@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 04 : Day 02: 26.05.2026 : Other way of grid</title>
+        <style>
+            .item1{
+                grid-area: a1;
+            }
+
+            .item2{
+                grid-area: a2;
+            }
+            .item3{
+                grid-area: a3;
+            }
+            .item4{
+                grid-area: a4;
+            }
+            .item5{
+                grid-area: a5;
+            }
+            .item6{
+                grid-area: a6;
+            }
+
+            div
+            {
+                border:1px solid black;
+            }
+            main{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 100px);
+
+                grid-template-areas: 
+                    "a1 a4 a2 a3"
+                    "a1 a4 a5 a6";
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Week 04 : Day 02: 26.05.2026 : Other way of grid</h1>            
+        </header>
+        <!-- main element will be grid container -->
+        <main>
+            <!-- grid items -->
+            <div class="item1"> 1 </div>
+            <div class="item2"> 2 </div>
+            <div class="item3"> 3 </div>
+            <div class="item4"> 4 </div>
+            <div class="item5"> 5 </div>
+            <div class="item6"> 6 </div>
+        </main>
+
+        <footer>
+            <p> &copy; Copyright : NAIT</p>
+        </footer>
+    </body>
+</html>
