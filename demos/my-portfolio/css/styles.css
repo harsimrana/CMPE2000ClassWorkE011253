@@ -96,3 +96,20 @@ th{
     background-color: #e8eef5;
 }
 
+/* Desktop view */
+@media screen and (min-width:800px)
+{
+    main 
+    {
+        display:grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 10px;
+    }
+
+    .nestedgrid
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
+}
