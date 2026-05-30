@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 04 Day 03: Forms</title>
+        <style>
+            label 
+            {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1> Week 04: Day 03: 29.05.2026: Forms : Student Registration form</h1>
+        </header>
+
+        <main>
+           <form action="" method="">
+            <!-- action will be a url of server file which will process form data -->
+            <!-- method http method- GET/POST -->
+                <label for="username"> Name: </label> <!-- label tag is used for providing a label-->
+                <input type="text" name="username" required>           <!-- this is main element for taking values from user-->
+
+                <label for="studentid">Student Id</label>
+                <input type="text" name="studentid" required>
+
+                <label for="">Password</label>
+                <input type="password">
+                <br><br>
+
+                <fieldset>
+                    <legend>Gender</legend>
+
+                    <input type="radio" name="gender" checked> Male
+                    <input type="radio" name="gender"> Female
+                    <input type="radio" name="gender"> Other
+                </fieldset>
+
+                <br><br>
+
+                <label for="">Hobbies</label>
+                <input type="checkbox" checked> Singing
+                <input type="checkbox"> Playing Chess
+                <input type="checkbox"> Guitar 
+                <input type="checkbox"> Reading Books
+
+                <br>
+
+                <label for="">City</label>
+                <!-- Drop down list using select element -->
+                <select>
+                    <option value="none"> Select City </option>
+                    <option value="edmonton"> Edmonton</option>
+                    <option value="calgary"> Calgary</option>
+                    <option value="reddeer" selected> Red Deer </option> 
+                    <!-- selected attribute is used to select a default value -->
+                </select>
+
+                <br>
+                <label for=""> What is your rating for our form?</label>
+                <input type="number" min="0" max="10" step="3" value="10">
+
+                <br>
+                <input type="range" min="0" max ="10" step="1" value="3">
+
+                <br>
+                <!-- for buttons use submit, reset or button as type attribute value  -->
+                <!-- submit the form using special button of submit type -->
+                <input type="submit" value="Submit"> 
+                <!-- Reset your form back to default values -->
+                <input type="reset" value="reset">
+                
+                <!-- Button tag is used to create a simple button -->
+                <button> Login</button>
+           </form> 
+        </main>
+        
+        <footer>
+
+        </footer>
+    </body>
+</html>
