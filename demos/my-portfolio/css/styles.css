@@ -96,6 +96,10 @@ th{
     background-color: #e8eef5;
 }
 
+label{
+    display: block;
+}
+
 /* Desktop view */
 @media screen and (min-width:800px)
 {
