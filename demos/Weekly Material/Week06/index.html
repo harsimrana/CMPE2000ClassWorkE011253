@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 06 Day 02 Demo 01: JavaScript</title>
+
+        <!-- Link to JavaScript file -->
+        <script src="code.js"> </script>
+
+        <script>
+            // Embedded style of JavaScript: Inside the head section of your HTML Page
+            // Single line comment
+            /*
+                Multi line comment
+            */
+
+            function firstFunction()
+            {
+                // for debugging this function is going to helpful
+                console.log("Inside firstFunction");
+                var message = "Hello from my first function";
+                console.log(message);
+                window.alert(message);
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Week 06 Day 02 : 09 June 2026 : Demo 01: JavaScript</h1>
+        </header>
+
+        <main>
+            <button onclick="window.alert('Successfully login to website.');"> Click Me for a message</button>
+            <!-- alert(): give an alert message to user -->
+             <!-- Default object is window -->
+            <button onclick="document.body.style.backgroundColor='lightblue';"> Click to change color</button>
+
+            <button onclick="document.write(document.body.innerHTML);"> Duplicate</button>
+
+            <button onclick="firstFunction()"> Call my function</button>
+            
+            <button onclick="secondFunction()">Call External file function</button>
+
+            <button onclick="redirectToNait()"> Visit NAIT </button>
+        </main>
+
+        <footer>
+            <script>
+                document.write("Copyright: NAIT 2026 <br>");
+                var lastModifiedDateTime= document.lastModified;
+                document.write("Last Updated on: " + lastModifiedDateTime);
+            </script>
+        </footer>
+    </body>
+</html>
