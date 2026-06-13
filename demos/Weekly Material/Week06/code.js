@@ -20,3 +20,36 @@ function redirectToNait()
     // location property - redirect the user to any other URL
     // window keyword is optional because it is default
 }
+
+function obtainDimensions()
+{
+    console.log("Inside obtain Dimensions")
+    width = window.innerWidth;
+    height= window.innerHeight;
+
+    console.log("Width: " + width +" Height: "+height);
+}
+
+function inputAge()
+{
+         // Prompt message, Default Value
+    var age = prompt("Enter your age: ", "0");
+
+    // It will return age value
+    // If ok button is clicked, it will return value entered
+    // If cancel button is clicked, it will retung null
+
+    // console.log("Values entered: " +  age);
+    console.log(`Value entered: ${age} `);
+
+    // Not a number
+    // 
+    if(!isNaN(age))
+    {
+        alert("Valid values");
+    }
+    else
+    {
+        alert("Please provide a valid number");
+    }
+}
