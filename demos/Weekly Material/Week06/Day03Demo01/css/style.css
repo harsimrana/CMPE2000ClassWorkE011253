@@ -4,3 +4,11 @@ div
     padding:20px;
     margin-top: 10px;
 }
+
+table, th,td{
+    border: 1px solid blue;
+}
+
+table{
+    border-collapse: collapse;
+}

@@ -1,5 +1,6 @@
 // Js file for Week 06 Day 03: Demo 01
 
+let arrNames= ["Simran", "Rex", "Habib", "Carl", "Joey", "Lucky", "Joseph", "Elodie", "Rosine", "Boss"]
 console.log("first message from js file");
 
 /*
@@ -25,6 +26,37 @@ window.onload = function()
 
    document.getElementById("addParaDynamically").onclick = addParaDynamically;
 
+   document.getElementById("addTable").onclick = addTableDynamically;
+}
+
+function addTableDynamically()
+{
+    console.log('inside add table dynamically ');
+    let tablestr = "<table>";
+        // Header row
+        tablestr += "<tr>";
+            tablestr += "<th> S.No</th>";
+            tablestr += "<th> Student Name</th>";
+            tablestr += "<th> Email </th>";
+        tablestr += "</tr>";
+        
+        for(i= 0; i< 10; ++i)
+        {
+            //  data row
+            tablestr += "<tr>";
+                //tablestr += "<td>" + i + "</td>";
+                // Alternative of adding values inside a string
+                tablestr += `<td>  ${i+1} </td>`;
+                tablestr += `<td> ${arrNames[i]} </td>`;
+                tablestr += `<td> ${arrNames[i]}@nait.ca </td>`;
+            tablestr += "</tr>";
+        }
+
+    tablestr += "</table>";  // tablestr = tablestr + "</table>";
+
+    console.log(tablestr);
+
+    document.getElementById("tabledata").innerHTML = tablestr;
 }
 
 function addParaDynamically()
