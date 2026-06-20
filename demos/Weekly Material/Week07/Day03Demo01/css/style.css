@@ -1,0 +1,20 @@
+main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 100px);
+}
+
+section{
+    border: 2px solid green;
+    display: flex;
+    /* vertical alignment of items start/center/end */
+    align-items: center;
+    /* Horizontal alignment of items */
+    justify-content: center;
+}
+
+.newClass
+{
+    background-color: aqua;
+    border: 2px solid red;
+}
