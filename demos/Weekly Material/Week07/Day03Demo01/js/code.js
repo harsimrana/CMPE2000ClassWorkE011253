@@ -1,5 +1,9 @@
 console.log("from JS");
 
+let elem = ""; // storing new node as global variable
+
+let timer ="";  // to track timer
+
 window.onload = function()
 {
     console.log("On page load"); 
@@ -10,6 +14,74 @@ window.onload = function()
     // id - #  | class-  . | tagname  |  [attributeName=value]   | div > p
     document.querySelector("#cabtn").onclick= CreateNAppendNode;
 
+    // Anonymous function- function without name: suitable candidate for event listener
+    document.querySelector("#rembtn").onclick = function ()
+    {
+        console.log("Inside remove button click listener");
+
+        // Keep a hold on container element
+        let container = document.querySelector("#s1");
+        // hold on child element
+        let child = document.querySelector("#myParagraph");
+        // because querySelector will return null if there is no matching element
+
+        if(child !=null) // if present, only then remove it
+        {
+            // Remove specific child from parent
+            container.removeChild(child);
+        }
+
+        // Just to answer a question- how can we remove text inside any element
+        //document.querySelector("#s1").innerHTML="1"; // innerHTML property will help you
+    }
+
+    // Arrow function is another version for event listener
+    document.querySelector("#movebtn").onclick = ()=> {
+        console.log("Inside Move element listener");
+
+        let cellNumber = Math.floor((Math.random() * 6) + 1);
+
+        console.log(cellNumber);
+
+        document.querySelector("#s"+cellNumber).appendChild(elem);
+    }
+
+    //assigning click event
+    document.querySelector("#moveEleTimer").onclick= MoveTextOnTimer;
+
+    // assigning click event on stop Timer element
+    document.querySelector("#stopTimer").onclick = StopElement;
+
+}
+
+function StopElement()
+{
+    console.log("inside Stop Element");
+
+    // Trying to clear timer with the help of global variable
+    // clearTimer()- to clear time interval
+    clearInterval(timer);
+}
+
+function MoveTextOnTimer()
+{
+    console.log("inside Move Text on Timer funciton");
+            //        function, timedelay in milliseconds
+    timer = setInterval(MoveTextNode, 200); // Millseconds
+    // setInterval function repeatedly execute a specified function or code block
+    // at a fixed time intervals
+
+
+}
+function MoveTextNode()
+{
+    console.log("inside Move Text node");
+    // Random number between 0 and 1 where 1 is included
+    let cellNumber = Math.floor((Math.random() * 6) + 1);
+
+    console.log(cellNumber);
+
+    document.querySelector("#s"+cellNumber).appendChild(elem);
 }
 
 function CreateNAppendNode()
@@ -47,7 +119,6 @@ function CreateNAppendNode()
 
     let section1 =  document.querySelector("#s1");
 
-    
     section1.append(elem);
 
 }
