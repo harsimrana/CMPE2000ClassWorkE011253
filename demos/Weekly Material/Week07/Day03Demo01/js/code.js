@@ -67,7 +67,7 @@ function MoveTextOnTimer()
 {
     console.log("inside Move Text on Timer funciton");
             //        function, timedelay in milliseconds
-    timer = setInterval(MoveTextNode, 200); // Millseconds
+    timer = setInterval(MoveTextNode, 400); // Millseconds
     // setInterval function repeatedly execute a specified function or code block
     // at a fixed time intervals
 
