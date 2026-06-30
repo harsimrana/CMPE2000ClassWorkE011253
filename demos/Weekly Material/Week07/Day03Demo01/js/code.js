@@ -4,6 +4,8 @@ let elem = ""; // storing new node as global variable
 
 let timer ="";  // to track timer
 
+let userScore= 0;
+
 window.onload = function()
 {
     console.log("On page load"); 
@@ -52,6 +54,8 @@ window.onload = function()
     // assigning click event on stop Timer element
     document.querySelector("#stopTimer").onclick = StopElement;
 
+    
+    
 }
 
 function StopElement()
@@ -61,13 +65,14 @@ function StopElement()
     // Trying to clear timer with the help of global variable
     // clearTimer()- to clear time interval
     clearInterval(timer);
+    
 }
 
 function MoveTextOnTimer()
 {
     console.log("inside Move Text on Timer funciton");
             //        function, timedelay in milliseconds
-    timer = setInterval(MoveTextNode, 400); // Millseconds
+    timer = setInterval(MoveTextNode, 1000); // Millseconds
     // setInterval function repeatedly execute a specified function or code block
     // at a fixed time intervals
 
@@ -120,5 +125,17 @@ function CreateNAppendNode()
     let section1 =  document.querySelector("#s1");
 
     section1.append(elem);
+    // exercise 1 : to stop the timer if user is able to click
+    //document.querySelector("#myParagraph").onclick = StopElement;
+    // exercise 2: to update the score of user and give an alert message
+    document.querySelector("#myParagraph").onclick = updateScore;
+}
+
+function updateScore()
+{
+    console.log("insider userScore");
+   
+
+    alert(`User Score: ${++userScore}`);
 
 }
