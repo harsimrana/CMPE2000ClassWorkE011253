@@ -6,6 +6,8 @@ let timer ="";  // to track timer
 
 let userScore= 0;
 
+let timeDelay = 1000;
+
 window.onload = function()
 {
     console.log("On page load"); 
@@ -54,8 +56,7 @@ window.onload = function()
     // assigning click event on stop Timer element
     document.querySelector("#stopTimer").onclick = StopElement;
 
-    
-    
+  
 }
 
 function StopElement()
@@ -72,10 +73,9 @@ function MoveTextOnTimer()
 {
     console.log("inside Move Text on Timer funciton");
             //        function, timedelay in milliseconds
-    timer = setInterval(MoveTextNode, 1000); // Millseconds
+    timer = setInterval(MoveTextNode, timeDelay); // Millseconds
     // setInterval function repeatedly execute a specified function or code block
     // at a fixed time intervals
-
 
 }
 function MoveTextNode()
@@ -135,7 +135,16 @@ function updateScore()
 {
     console.log("insider userScore");
    
+    //alert(`User Score: ${++userScore}`);
+    console.log(`User Score: ${++userScore}`);
 
-    alert(`User Score: ${++userScore}`);
+    if(timeDelay > 100)
+    {
+        timeDelay -=100;
+    }
+
+    clearInterval(timer);
+    timer =setInterval(MoveTextNode, timeDelay);
+    console.log("Time delay " +timeDelay);
 
 }
