@@ -41,13 +41,7 @@ window.onload = function()
 
     // Arrow function is another version for event listener
     document.querySelector("#movebtn").onclick = ()=> {
-        console.log("Inside Move element listener");
-
-        let cellNumber = Math.floor((Math.random() * 6) + 1);
-
-        console.log(cellNumber);
-
-        document.querySelector("#s"+cellNumber).appendChild(elem);
+       MoveTextNode();
     }
 
     //assigning click event
@@ -56,7 +50,31 @@ window.onload = function()
     // assigning click event on stop Timer element
     document.querySelector("#stopTimer").onclick = StopElement;
 
+    document.querySelector("button[name='posElement']").onclick= PositionSections; 
   
+}
+
+function PositionSections()
+{
+    console.log("inside Position Section function");
+
+    //console.log(document.querySelectorAll("section"));
+    
+    let gridList = document.querySelectorAll("section");
+
+    console.log(gridList);
+
+    // Important piece for LAB 02
+    let str= "0103";
+    console.log(str.substring(0,2)); // substring 0 1
+    console.log(str.substring(2,4)); // substring 2 3
+
+    let rowNo = parseInt(window.prompt("Enter start row line number", 1));
+    let colNo = gridList[0].getAttribute("colNumber"); 
+
+    gridList[0].style.setProperty("grid-row", `${rowNo}/${rowNo+1}`);
+    gridList[0].style.setProperty("grid-column", "3/4");
+
 }
 
 function StopElement()
@@ -144,7 +162,7 @@ function updateScore()
     }
 
     clearInterval(timer);
-    timer =setInterval(MoveTextNode, timeDelay);
+    timer = setInterval(MoveTextNode, timeDelay);
     console.log("Time delay " +timeDelay);
 
 }
