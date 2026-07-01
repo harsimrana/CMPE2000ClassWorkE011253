@@ -51,7 +51,22 @@ window.onload = function()
     document.querySelector("#stopTimer").onclick = StopElement;
 
     document.querySelector("button[name='posElement']").onclick= PositionSections; 
-  
+    
+    document.querySelector("#chngePicture").onclick = function (){
+        console.log("Inside Change Picture event listener");
+        // Step 1: Create an image and set all required attributes
+        // let str = "<img >" // Not like that
+
+        let image = new Image();
+
+        image.setAttribute("src", "./images/NaitLogo.png");
+        image.setAttribute("alt", "NAIT Logo");
+        image.setAttribute("title", "NAIT LOGO");
+        image.style = "height:50px;width:50px;";
+
+        document.querySelector(".imageContainer").appendChild(image);
+
+    }
 }
 
 function PositionSections()
