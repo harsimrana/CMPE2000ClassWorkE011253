@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 08 Day 03 : 03.07.2026</title>
+
+        <!-- Link to css -->
+        <link rel="stylesheet" href="./css/style.css">
+
+        <!-- Link to js file -->
+        <script src="./js/code.js"></script> 
+    </head>
+    <body>
+        <header>
+            <h1>Week 08 Day 03 : 03.07.2026: Form Validation </h1>
+        </header>
+
+        <main>
+
+            <section>
+                <h2> Form Elements</h2>
+
+                <form name="LoginForm" action="https://thor.cnt.sast.ca/~crazyone/server.php" method="post">
+                    <label for="username">Username</label>
+                    <input type="text" required name="username" value="Simran">
+                    <br>
+                    <input type="password" name="password">
+                    <br>
+                    <button type="submit"> Login</button>
+                </form>
+            </section>
+
+            <section>
+                <h2> Category </h2>
+                <input type="radio" name="category" value="student"> Student
+                <input type="radio" name="category" value="Instructor"> Instructor
+                <input type="radio" name="category" value="Admin"> Admin
+
+                <button id="rdoSelected"> Show selected Category</button>
+            </section>
+        </main>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>
