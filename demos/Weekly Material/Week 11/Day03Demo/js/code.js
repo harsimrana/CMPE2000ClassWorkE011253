@@ -62,8 +62,46 @@ $( ()=>{
             alert("Length is less than equal to 5");
         }
     })
+
+    //  Bind the click event on button with id b2
+    $("#b2").click(FormData);
 }
 
 );
+
+function FormData()
+{
+    console.log("Inside form data function");
+    let userName = $("[name=username]").val(); // getting the value of username field
+    // with form elements val() function is important
+
+    console.log(userName);
+    if(userName.length ==0)
+    {
+        alert("Username should not be empty");
+        $("[name=username]").focus(); // set the focus on any specific element
+    }
+    else{
+        // Submit your form
+        // Make sure to select your form instead of your button
+        $("[name=myForm]").submit();
+    }
+    console.log(this);
+
+    // Convert JavaScript objects into jQuery objects
+    $(this).css("color","red");
+
+    // JavaScript we querySelectorAll()
+    let ElementList = $("input"); 
+
+    console.log(ElementList);
+
+    // foreach in Javascript
+    // each () in jQuery()
+
+    ElementList.each( (index, item) =>{
+        $(item).css("background-color", "green");
+    })
+}
 
 
