@@ -65,6 +65,37 @@ $( ()=>{
 
     //  Bind the click event on button with id b2
     $("#b2").click(FormData);
+
+    // bind the click event on button with id b3
+    $("#b3").click( ()=>{
+        console.log("Inside b3 button event listener");
+        $("img").fadeOut(1000); 
+        // Asynchronous
+        $("img").prop("src", "./images/GoogleLogo.png" ).fadeIn(1000);
+    });
+
+    $("#b4").click(()=>{ 
+        console.log("Inside b4 Event listener");
+        // Afer completion of first operation [fadeOut], it will call callback function 
+        
+                    // Duration, callback function
+        $("img").fadeOut(1000, ()=>{
+            console.log("inside callback function");
+            $("img").prop("src","./images/GoogleLogo.png").fadeIn(1000, ()=>{
+                // Third event
+                $("img").fadeTo(1000, 0.5); // 50% blur
+                
+                $("img").parent().css("border","2px solid blue");
+
+                let element = "<p> Child P element</p>";
+
+                // adding an element into a parent container
+
+                $("#container").append(element);
+            });
+        });
+    });
+
 }
 
 );
