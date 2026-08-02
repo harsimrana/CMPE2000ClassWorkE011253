@@ -32,7 +32,36 @@ $(()=>{
 
         MakeAjaxCall(urlEDM, "GET", {}, "JSON", successCityData, errorHandler );
     });
+
+    let url ="http://localhost:8080/serverfiles/main.php";
+
+    $("#buttonsimpleajaxcall").click(()=>{
+        console.log("inside simple ajax call part");
+        
+        MakeAjaxCall(url,"GET", {}, "HTML", successSimpleAjaxCall,errorHandler );
+
+    });
+
+    $("#buttonClientData").click(()=>{
+        console.log("inside client Data Ajax call");
+        let data = {};
+        data['name'] = "Harsimranjot";
+        data['action'] = "b2";
+        
+        console.log(data);
+
+        // You can define separate success handler for each Ajax call
+        MakeAjaxCall(url,"GET", data, "HTML", successSimpleAjaxCall,errorHandler );
+    });
+
 });
+
+function successSimpleAjaxCall(serverData, serverStatus)
+{
+    console.log(serverData);
+
+    $("#serverResponse").html(serverData);
+}
 
 function successCityData(serverData, serverStatus)
 {
@@ -47,15 +76,17 @@ function successCityData(serverData, serverStatus)
     let str="";
     for(i = 0; i < serverData.length; ++i )
     {
-        console.log(serverData[i].ward);
+        // console.log(serverData[i].ward);
         str += `Ward Number: ${serverData[i].ward} || Neighbourhood_number : ${serverData[i].neighbourhood_number} <br>`;
     }
 
     $("#serverResponse").html(str);
 }
-function errorHandler()
+function errorHandler(ajaxreq, errorCode, errorThrown)
 {
-
+    console.log("Inside error Handler");
+    console.log(errorCode);
+    console.log(errorThrown); 
 }
 // Generic function to handle AJAX calls
 function MakeAjaxCall(serverURL, reqMethod, clientData, resDataType, fxnSuccess, fxnError)
