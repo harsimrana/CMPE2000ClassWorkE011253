@@ -33,7 +33,11 @@ $(()=>{
         MakeAjaxCall(urlEDM, "GET", {}, "JSON", successCityData, errorHandler );
     });
 
-    let url ="http://localhost:8080/serverfiles/main.php";
+    // Link to local server at my machine [You need to configure one to test with this]
+    // let url ="http://localhost:8080/serverfiles/main.php";
+
+    // Link to live server [Use this one]
+    let url= "https://thor.cnt.sast.ca/~aulakhha/serverfiles/main.php";
 
     $("#buttonsimpleajaxcall").click(()=>{
         console.log("inside simple ajax call part");
@@ -45,7 +49,8 @@ $(()=>{
     $("#buttonClientData").click(()=>{
         console.log("inside client Data Ajax call");
         let data = {};
-        data['name'] = "Harsimranjot";
+        data['name'] = $("input").val();
+
         data['action'] = "b2";
         
         console.log(data);
@@ -54,7 +59,31 @@ $(()=>{
         MakeAjaxCall(url,"GET", data, "HTML", successSimpleAjaxCall,errorHandler );
     });
 
+    $("#buttonClientJson").click(
+        ()=>{
+            console.log("inside event handler");
+            let clientData ={};
+
+            clientData.name= "Simran";
+            clientData.action = "b3";
+
+            MakeAjaxCall(url, "get", clientData, "json", successSpecialCase, errorHandler);
+        }
+    )
+
 });
+
+function successSpecialCase(serverData, serverStatus)
+{
+    console.log(serverData);
+    
+    $(serverData).each(element => {
+        console.log(element);
+    });
+    
+    //  $("div ul").html( "<li>"+serverData.name+"</li>");
+     $("div ul").append( "<li>"+serverData.name+"</li>");
+}
 
 function successSimpleAjaxCall(serverData, serverStatus)
 {
