@@ -154,3 +154,62 @@ button:hover{
         column-gap: 10px;
     }
 }
+
+
+/* Theme Toggle Button */
+
+#themeToggleBtn {
+    margin-top: 20px;
+    background-color: white;
+    color: #1f3b57;
+    border: 1px solid white;
+}
+
+#themeToggleBtn:hover {
+    background-color: #e8eef5;
+    color: #1f3b57;
+}
+
+/* Dark Theme Styles */
+
+.dark-theme {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-theme header,
+.dark-theme footer {
+    background-color: #111827;
+}
+
+.dark-theme .hero,
+.dark-theme .card,
+.dark-theme aside,
+.dark-theme #about {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+.dark-theme th {
+    background-color: #3a3a3a;
+}
+
+.dark-theme input,
+.dark-theme select,
+.dark-theme textarea {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #666666;
+}
+
+.dark-theme button {
+    background-color: #ffffff;
+    color: #1f3b57;
+    border-color: #ffffff;
+}
+
+.dark-theme button:hover {
+    background-color: #1f3b57;
+    color: #ffffff;
+}
